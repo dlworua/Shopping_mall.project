@@ -1,3 +1,5 @@
+import 'dart:io';
+
 class Product {
   String name;
   int price;
@@ -31,7 +33,7 @@ class ShoppingMall {
       print('0개보다 많은 개수의 상품만 담을 수 있어요!');
       return;
     }
-    //products에서 상품이름이 productName과 일치하는 상품 product라는 변수에 담기기
+    //products에서 상품이름이 productName과 일치하는 상품 product라는 변수에 담기
     Product? product;
     for (int i = 0; i < products.length; i++) {
       if (products[i].name == productName) {
@@ -67,6 +69,14 @@ void main() {
   ShoppingMall shopping = ShoppingMall();
   shopping.showProducts();
   //프로그램 실행시 안내 문자열 출력
+  print("[1] 상품목록보기 / [2] 장바구니에 담기 / [3] 장바구니에 담긴 상품의 총 가격 / [4] 프로그램 종료");
+  }
   //사용자 입력 받은 후 변수에 담기
+ String? input = stdin.readLineSync();
+
   //입력받은 값이 1이라면 상품목록 보여주기기
+ if(choice == '1'){
+ for(int i = 0; i<5; i++);
+ print(' ${products}원');
+ return;
 }
